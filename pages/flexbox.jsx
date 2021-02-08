@@ -1,10 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 const FlexboxPage = () => {
   return (
     <View style={styles.container}>
-      <Text>xxx</Text>
+      <View style={{ flex: 2, backgroundColor: "tomato" }}></View>
+      <View style={{ flex: 1, backgroundColor: "gold" }}></View>
+      <View style={{ flex: 3, backgroundColor: "dodgerblue" }}></View>
     </View>
   );
 };
