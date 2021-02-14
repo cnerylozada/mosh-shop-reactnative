@@ -1,5 +1,6 @@
 import React from "react";
-import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
+import { ImageBackground, StyleSheet, Text, View } from "react-native";
+import { Logo } from "../components";
 import { palette } from "../styles";
 
 const WelcomePage = () => {
@@ -9,6 +10,9 @@ const WelcomePage = () => {
         style={{ flex: 1 }}
         source={require("../styles/images/background.jpg")}
       >
+        <View style={{ marginTop: 40 }}>
+          <Logo />
+        </View>
         <View style={styles.buttonContainer}>
           <View style={styles.login}>
             <Text>Login</Text>
