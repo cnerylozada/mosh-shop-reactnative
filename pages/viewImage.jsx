@@ -12,6 +12,7 @@ const ViewImagePage = () => {
       <Image
         style={styles.image}
         source={require("../styles/images/chair.jpg")}
+        resizeMode="cover"
       />
     </View>
   );
@@ -22,15 +23,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: palette.black,
-  },
-  image: {
-    width: 100,
-    height: 100,
+    padding: 20,
   },
   btnContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    padding: 20,
+    marginBottom: 40,
+    paddingHorizontal: 20,
+  },
+  image: {
+    width: "100%",
+    height: "70%",
   },
   leftBtn: {
     width: 40,
