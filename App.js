@@ -11,7 +11,7 @@ import { ViewImagePage, WelcomePage } from "./pages";
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <ViewImagePage />
+      <WelcomePage />
     </SafeAreaView>
   );
 }

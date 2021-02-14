@@ -1,7 +1,7 @@
 import React from "react";
-import { ImageBackground, StyleSheet, Text, View } from "react-native";
+import { ImageBackground, StyleSheet, View } from "react-native";
 import { Logo } from "../components";
-import { palette } from "../styles";
+import { AppButton } from "../_commons";
 
 const WelcomePage = () => {
   return (
@@ -12,13 +12,9 @@ const WelcomePage = () => {
       <View style={styles.logoContainer}>
         <Logo />
       </View>
-      <View style={{ width: "100%" }}>
-        <View style={styles.login}>
-          <Text>Login</Text>
-        </View>
-        <View style={styles.register}>
-          <Text>Register</Text>
-        </View>
+      <View style={styles.btnContainer}>
+        <AppButton label="login" color="red" />
+        <AppButton label="register" color="green" />
       </View>
     </ImageBackground>
   );
@@ -30,17 +26,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-end",
     alignItems: "center",
+    padding: 20,
   },
   logoContainer: {
     position: "absolute",
     top: 40,
   },
-  login: {
-    backgroundColor: palette.red,
-    padding: 20,
-  },
-  register: {
-    backgroundColor: palette.green,
-    padding: 20,
+  btnContainer: {
+    justifyContent: "space-around",
+    width: "100%",
+    height: "15%",
   },
 });
