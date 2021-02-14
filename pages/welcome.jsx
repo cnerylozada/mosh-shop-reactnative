@@ -5,24 +5,22 @@ import { palette } from "../styles";
 
 const WelcomePage = () => {
   return (
-    <View style={styles.container}>
-      <ImageBackground
-        style={{ flex: 1 }}
-        source={require("../styles/images/background.jpg")}
-      >
-        <View style={{ marginTop: 40 }}>
-          <Logo />
+    <ImageBackground
+      style={styles.container}
+      source={require("../styles/images/background.jpg")}
+    >
+      <View style={styles.logoContainer}>
+        <Logo />
+      </View>
+      <View style={{ width: "100%" }}>
+        <View style={styles.login}>
+          <Text>Login</Text>
         </View>
-        <View style={styles.buttonContainer}>
-          <View style={styles.login}>
-            <Text>Login</Text>
-          </View>
-          <View style={styles.register}>
-            <Text>Register</Text>
-          </View>
+        <View style={styles.register}>
+          <Text>Register</Text>
         </View>
-      </ImageBackground>
-    </View>
+      </View>
+    </ImageBackground>
   );
 };
 
@@ -30,7 +28,12 @@ export default WelcomePage;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    position: "relative",
+    justifyContent: "flex-end",
+    alignItems: "center",
+  },
+  logoContainer: {
+    position: "absolute",
+    top: 40,
   },
   login: {
     backgroundColor: palette.red,
@@ -39,10 +42,5 @@ const styles = StyleSheet.create({
   register: {
     backgroundColor: palette.green,
     padding: 20,
-  },
-  buttonContainer: {
-    position: "absolute",
-    bottom: 0,
-    width: "100%",
   },
 });
