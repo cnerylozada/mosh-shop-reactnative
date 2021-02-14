@@ -6,12 +6,12 @@ import {
   StyleSheet,
   Text,
 } from "react-native";
-import { WelcomePage } from "./pages";
+import { ViewImagePage, WelcomePage } from "./pages";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <WelcomePage />
+      <ViewImagePage />
     </SafeAreaView>
   );
 }
