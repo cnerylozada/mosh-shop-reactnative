@@ -6,11 +6,12 @@ import {
   StyleSheet,
   Text,
 } from "react-native";
+import { WelcomePage } from "./pages";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <WelcomePage />
     </SafeAreaView>
   );
 }
@@ -19,6 +20,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-    backgroundColor: "cyan",
   },
 });
