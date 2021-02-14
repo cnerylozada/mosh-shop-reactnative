@@ -1,13 +1,26 @@
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 import { palette } from "../styles";
+import { Icon } from "../_commons";
+
+const btn = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  width: 50,
+  height: 50,
+};
 
 const ViewImagePage = () => {
   return (
     <View style={styles.container}>
       <View style={styles.btnContainer}>
-        <View style={styles.leftBtn}></View>
-        <View style={styles.rightBtn}></View>
+        <View style={styles.leftBtn}>
+          <Icon name="alpha-x-circle-outline" color="white" />
+        </View>
+        <View style={styles.rightBtn}>
+          <Icon name="bucket-outline" color="white" />
+        </View>
       </View>
       <Image
         style={styles.image}
@@ -19,6 +32,7 @@ const ViewImagePage = () => {
 };
 
 export default ViewImagePage;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -36,13 +50,11 @@ const styles = StyleSheet.create({
     height: "70%",
   },
   leftBtn: {
-    width: 40,
-    height: 40,
+    ...btn,
     backgroundColor: palette.red,
   },
   rightBtn: {
-    width: 40,
-    height: 40,
+    ...btn,
     backgroundColor: palette.green,
   },
 });
