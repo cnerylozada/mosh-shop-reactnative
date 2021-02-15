@@ -8,12 +8,17 @@ const WelcomePage = () => {
     <ImageBackground
       style={styles.container}
       source={require("../styles/images/background.jpg")}
+      blurRadius={2}
     >
       <View style={styles.logoContainer}>
         <Logo />
       </View>
       <View style={styles.btnContainer}>
-        <AppButton label="login" color="red" />
+        <AppButton
+          label="login"
+          color="red"
+          onPress={() => console.log("login")}
+        />
         <AppButton label="register" color="green" />
       </View>
     </ImageBackground>

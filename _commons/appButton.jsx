@@ -1,12 +1,13 @@
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import { palette } from "../styles";
-const AppButton = ({ label, color }) => {
+const AppButton = ({ label, color, onPress }) => {
   return (
-    <TouchableOpacity onPress={() => console.log("app-button")}>
-      <View style={[styles.container, { backgroundColor: palette[color] }]}>
-        <Text style={styles.label}>{label}</Text>
-      </View>
+    <TouchableOpacity
+      onPress={() => onPress()}
+      style={[styles.container, { backgroundColor: palette[color] }]}
+    >
+      <Text style={styles.label}>{label}</Text>
     </TouchableOpacity>
   );
 };
