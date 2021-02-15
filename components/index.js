@@ -1,2 +1,3 @@
 import Logo from "./logo";
-export { Logo };
+import Card from "./card";
+export { Logo, Card };
