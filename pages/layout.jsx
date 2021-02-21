@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { Card } from "../components";
-import { Avatar } from "../_commons";
+import { Avatar, SellerDetail } from "../_commons";
 
 const LayoutPage = () => {
   return (
@@ -11,14 +11,13 @@ const LayoutPage = () => {
         imageUrl="https://randomuser.me/api/portraits/women/31.jpg"
         size="small"
       />
-      <Avatar
-        imageUrl="https://randomuser.me/api/portraits/women/31.jpg"
-        size="medium"
-      />
-      <Avatar
-        imageUrl="https://randomuser.me/api/portraits/women/31.jpg"
-        size="large"
-      />
+      <View style={{ backgroundColor: "white", paddingVertical: 15 }}>
+        <SellerDetail
+          imageUrl="https://randomuser.me/api/portraits/women/31.jpg"
+          title="mosh hamedani"
+          subTitle="Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+        />
+      </View>
     </View>
   );
 };
