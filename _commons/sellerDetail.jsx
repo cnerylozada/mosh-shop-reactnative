@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   title: {
+    fontSize: 15,
     color: palette.black,
     fontWeight: "bold",
     textTransform: "capitalize",
