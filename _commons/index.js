@@ -1,4 +1,5 @@
 import Icon from "./icon";
 import AppButton from "./appButton";
+import Avatar from "./avatar";
 
-export { Icon, AppButton };
+export { Icon, AppButton, Avatar };
