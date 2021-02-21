@@ -19,7 +19,11 @@ const WelcomePage = () => {
           color="red"
           onPress={() => console.log("login")}
         />
-        <AppButton label="register" color="green" />
+        <AppButton
+          label="register"
+          color="green"
+          onPress={() => console.log("register")}
+        />
       </View>
     </ImageBackground>
   );
