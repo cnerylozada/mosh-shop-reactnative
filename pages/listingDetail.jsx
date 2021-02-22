@@ -25,7 +25,11 @@ const ListingDetailPage = () => {
           subTitle="Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
         />
         <View style={{ marginTop: 20 }}>
-          <AppButton color="red" label="Contact Seller" />
+          <AppButton
+            color="red"
+            label="Contact Seller"
+            onPress={() => console.log("contact-seller")}
+          />
         </View>
       </View>
     </View>
