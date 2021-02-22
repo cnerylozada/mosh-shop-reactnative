@@ -4,4 +4,5 @@ export const palette = {
   black: "#222f3e",
   white: "#ffffff",
   gray: "#95a5a6",
+  light: "#f5f6fa",
 };
