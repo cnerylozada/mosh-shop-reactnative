@@ -5,10 +5,7 @@ import { palette } from "../styles";
 const Card = ({ imageUrl, title, subTitle }) => {
   return (
     <View style={styles.container}>
-      <Image
-        style={styles.image}
-        source={require("../styles/images/jacket.jpg")}
-      />
+      <Image style={styles.image} source={{ uri: imageUrl }} />
 
       <View style={styles.detailContainer}>
         <Text style={styles.title}>{title}</Text>
@@ -32,6 +29,10 @@ const styles = StyleSheet.create({
   detailContainer: {
     padding: 15,
   },
-  title: { color: palette.black },
+  title: {
+    color: palette.black,
+    textTransform: "capitalize",
+    fontWeight: "900",
+  },
   subTitle: { color: palette.green },
 });
