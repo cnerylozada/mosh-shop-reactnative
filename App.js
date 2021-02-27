@@ -13,12 +13,13 @@ import {
   ListingDetailPage,
   MessagesPage,
   ListingPage,
+  MyAccountPage,
 } from "./pages";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <LayoutPage />
+      <MyAccountPage />
     </SafeAreaView>
   );
 }

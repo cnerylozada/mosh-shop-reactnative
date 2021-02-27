@@ -4,6 +4,7 @@ import LayoutPage from "./layout";
 import ListingPage from "./listing";
 import ListingDetailPage from "./listingDetail";
 import MessagesPage from "./messages";
+import MyAccountPage from "./myAccount";
 
 export {
   WelcomePage,
@@ -12,4 +13,5 @@ export {
   ListingDetailPage,
   MessagesPage,
   ListingPage,
+  MyAccountPage,
 };
