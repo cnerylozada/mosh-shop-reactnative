@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import { FlatList, StyleSheet, TouchableHighlight, View } from "react-native";
 import Swipeable from "react-native-gesture-handler/Swipeable";
 import { SellerDetail, Separator } from "../_commons";
-import { messagesData } from "../utils";
+import { messagesData, refreshMessagesData } from "../utils";
 import { palette } from "../styles";
 import { SwipeRenderActions } from "../components";
 
 const MessagesPage = () => {
   const [messages, setMessages] = useState([]);
+  const [refreshing, setRefreshing] = useState(false);
   useEffect(() => {
     setMessages((_) => [..._, ...messagesData]);
   }, []);
@@ -40,6 +41,8 @@ const MessagesPage = () => {
           </TouchableHighlight>
         )}
         ItemSeparatorComponent={() => <Separator />}
+        refreshing={refreshing}
+        onRefresh={() => setMessages((_) => [...refreshMessagesData, ..._])}
       />
     </View>
   );
