@@ -18,7 +18,7 @@ import {
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <ListingPage />
+      <LayoutPage />
     </SafeAreaView>
   );
 }

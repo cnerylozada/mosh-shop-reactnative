@@ -1,12 +1,32 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import { Card } from "../components";
+import { AccountOption, Card } from "../components";
 import { Avatar, SellerDetail } from "../_commons";
 
 const LayoutPage = () => {
   return (
     <View style={styles.container}>
-      <Card title="Red jacket for sale !" subTitle="$100" />
+      <AccountOption
+        iconName="format-list-bulleted"
+        label="my listings"
+        theme="red"
+      />
+      <AccountOption
+        iconName="email-outline"
+        label="my messages"
+        theme="green"
+      />
+      <AccountOption
+        iconName="logout"
+        label="logout"
+        theme="yellow"
+        hasChevron
+      />
+      <Card
+        title="Red jacket for sale !"
+        subTitle="$100"
+        imageUrl="https://i.picsum.photos/id/1036/4608/3072.jpg?hmac=Tn9CS_V7lFSMMgAI5k1M38Mdj-YEJR9dPJCyeXNpnZc"
+      />
       <Avatar
         imageUrl="https://randomuser.me/api/portraits/women/31.jpg"
         size="small"

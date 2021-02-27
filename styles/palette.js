@@ -6,4 +6,5 @@ export const palette = {
   gray: "#95a5a6",
   light: "#f5f6fa",
   melon: "#f7f1e3",
+  yellow: "#ffe66d",
 };
