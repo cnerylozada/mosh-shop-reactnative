@@ -1,13 +1,15 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, TouchableWithoutFeedback, View } from "react-native";
 import { Icon } from "../_commons";
 import { palette } from "../styles";
 
-const SwipeRenderActions = () => {
+const SwipeRenderActions = ({ onPress }) => {
   return (
-    <View style={styles.container}>
-      <Icon name="home" color="white" size="small" />
-    </View>
+    <TouchableWithoutFeedback onPress={onPress}>
+      <View style={styles.container}>
+        <Icon name="trash-can-outline" color="white" size="small" />
+      </View>
+    </TouchableWithoutFeedback>
   );
 };
 
