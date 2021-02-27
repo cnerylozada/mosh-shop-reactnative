@@ -1,8 +1,17 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, FlatList } from "react-native";
 import { SellerDetail } from "../_commons";
 import { palette } from "../styles";
 import { AccountOption } from "../components";
+import { myAccountOptions } from "../utils";
+
+const OptionWrapper = ({ children }) => {
+  return (
+    <View style={{ backgroundColor: palette.white, padding: 12 }}>
+      {children}
+    </View>
+  );
+};
 
 const MyAccountPage = () => {
   return (
@@ -14,9 +23,23 @@ const MyAccountPage = () => {
           imageUrl="https://randomuser.me/api/portraits/men/77.jpg"
         />
       </View>
-      <View style={{ backgroundColor: palette.white, padding: 8 }}>
+
+      <FlatList
+        keyExtractor={(item) => item.id.toString()}
+        data={myAccountOptions}
+        renderItem={({ item }) => (
+          <OptionWrapper>
+            <AccountOption
+              label={item.label}
+              iconName={item.iconName}
+              theme={item.theme}
+            />
+          </OptionWrapper>
+        )}
+      />
+      <OptionWrapper>
         <AccountOption label="log out" iconName="logout" theme="yellow" />
-      </View>
+      </OptionWrapper>
     </View>
   );
 };
@@ -31,5 +54,6 @@ const styles = StyleSheet.create({
   sellerContainer: {
     padding: 12,
     backgroundColor: palette.white,
+    marginBottom: 30,
   },
 });
