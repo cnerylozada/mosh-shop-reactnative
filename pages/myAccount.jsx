@@ -24,22 +24,27 @@ const MyAccountPage = () => {
         />
       </View>
 
-      <FlatList
-        keyExtractor={(item) => item.id.toString()}
-        data={myAccountOptions}
-        renderItem={({ item }) => (
-          <OptionWrapper>
-            <AccountOption
-              label={item.label}
-              iconName={item.iconName}
-              theme={item.theme}
-            />
-          </OptionWrapper>
-        )}
-      />
-      <OptionWrapper>
-        <AccountOption label="log out" iconName="logout" theme="yellow" />
-      </OptionWrapper>
+      <View>
+        <FlatList
+          keyExtractor={(item) => item.id.toString()}
+          data={myAccountOptions}
+          renderItem={({ item }) => (
+            <OptionWrapper>
+              <AccountOption
+                label={item.label}
+                iconName={item.iconName}
+                theme={item.theme}
+                hasChevron={item.hasChevron}
+              />
+            </OptionWrapper>
+          )}
+          style={{ marginBottom: 15 }}
+          ItemSeparatorComponent={() => <View style={styles.separator}></View>}
+        />
+        <OptionWrapper>
+          <AccountOption label="log out" iconName="logout" theme="yellow" />
+        </OptionWrapper>
+      </View>
     </View>
   );
 };
@@ -55,5 +60,9 @@ const styles = StyleSheet.create({
     padding: 12,
     backgroundColor: palette.white,
     marginBottom: 30,
+  },
+  separator: {
+    borderTopColor: palette.light,
+    borderTopWidth: 2,
   },
 });
