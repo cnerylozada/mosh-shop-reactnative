@@ -3,5 +3,6 @@ import AppButton from "./appButton";
 import Avatar from "./avatar";
 import SellerDetail from "./sellerDetail";
 import Separator from "./separator";
+import AppTextInput from "./appTextInput";
 
-export { Icon, AppButton, Avatar, SellerDetail, Separator };
+export { AppTextInput, Icon, AppButton, Avatar, SellerDetail, Separator };

@@ -1,20 +1,16 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { AccountOption, Card } from "../components";
-import { Avatar, SellerDetail } from "../_commons";
+import { Avatar, SellerDetail, AppTextInput } from "../_commons";
 
 const LayoutPage = () => {
   return (
     <View style={styles.container}>
+      <AppTextInput />
       <AccountOption
         iconName="format-list-bulleted"
         label="my listings"
         theme="red"
-      />
-      <AccountOption
-        iconName="email-outline"
-        label="my messages"
-        theme="green"
       />
       <AccountOption
         iconName="logout"
