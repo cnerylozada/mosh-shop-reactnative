@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { TextInput } from "react-native-gesture-handler";
 import { AccountOption, Card } from "../components";
-import { Avatar, SellerDetail, AppTextInput } from "../_commons";
+import { Avatar, SellerDetail, AppTextInput, InputPicker } from "../_commons";
 
 const LayoutPage = () => {
+  const [value, setValue] = useState("xxx");
   return (
     <View style={styles.container}>
-      <AppTextInput iconName="home" placeholder="Lets write" />
-      <Text></Text>
-      <AppTextInput iconName="mail" placeholder="Lets write" />
-      <Text></Text>
+      <InputPicker placeholder="Category" />
 
+      <Text>{value}</Text>
+      <AppTextInput
+        iconName="home"
+        placeholder="Lets write"
+        value={value}
+        onSetValue={setValue}
+      />
+      <Text></Text>
       <AppTextInput placeholder="Lets write" />
       <Text></Text>
 

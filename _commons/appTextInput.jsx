@@ -3,15 +3,13 @@ import { StyleSheet, TextInput, View } from "react-native";
 import { palette } from "../styles";
 import Icon from "./icon";
 
-const AppTextInput = ({ iconName, ...otherProps }) => {
-  const [value, setValue] = useState();
+const AppTextInput = ({ iconName, onSetValue, ...otherProps }) => {
   return (
     <View style={styles.container}>
       {!!iconName && <Icon name={iconName} size="caption" color="gray" />}
       <TextInput
         style={!!iconName ? { marginLeft: 5 } : {}}
-        value={value}
-        onChangeText={(value) => setValue(value)}
+        onChangeText={(value) => onSetValue(value)}
         {...otherProps}
       />
     </View>
