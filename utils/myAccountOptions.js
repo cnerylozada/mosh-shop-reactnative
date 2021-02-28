@@ -1,15 +1,17 @@
+import { iconLibrary } from "../styles";
+
 export const myAccountOptions = [
   {
     id: 1,
     label: "my listings",
-    iconName: "format-list-bulleted",
+    iconName: iconLibrary.list,
     hasChevron: true,
     theme: "red",
   },
   {
     id: 2,
     label: "my messages",
-    iconName: "email-outline",
+    iconName: iconLibrary.email,
     hasChevron: true,
     theme: "green",
   },

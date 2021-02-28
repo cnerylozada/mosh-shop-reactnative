@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, FlatList } from "react-native";
 import { SellerDetail } from "../_commons";
-import { palette } from "../styles";
+import { iconLibrary, palette } from "../styles";
 import { AccountOption } from "../components";
 import { myAccountOptions } from "../utils";
 
@@ -42,7 +42,11 @@ const MyAccountPage = () => {
           ItemSeparatorComponent={() => <View style={styles.separator}></View>}
         />
         <OptionWrapper>
-          <AccountOption label="log out" iconName="logout" theme="yellow" />
+          <AccountOption
+            label="log out"
+            iconName={iconLibrary.logout}
+            theme="yellow"
+          />
         </OptionWrapper>
       </View>
     </View>

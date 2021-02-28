@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, StyleSheet, View } from "react-native";
-import { palette } from "../styles";
 import { Icon } from "../_commons";
+import { iconLibrary, palette } from "../styles";
 
 const btn = {
   display: "flex",
@@ -16,10 +16,10 @@ const ViewImagePage = () => {
     <View style={styles.container}>
       <View style={styles.btnContainer}>
         <View style={styles.leftBtn}>
-          <Icon name="alpha-x-circle-outline" color="white" />
+          <Icon name={iconLibrary.close} color="white" />
         </View>
         <View style={styles.rightBtn}>
-          <Icon name="bucket-outline" color="white" />
+          <Icon name={iconLibrary.trash} color="white" />
         </View>
       </View>
       <Image

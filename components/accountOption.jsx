@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { palette } from "../styles";
+import { iconLibrary, palette } from "../styles";
 import { Icon } from "../_commons";
 
 const themes = {
@@ -24,7 +24,7 @@ const AccountOption = ({ label, iconName, hasChevron, theme }) => {
       <View style={styles.labelContainer}>
         <Text style={styles.label}>{label}</Text>
         {!!hasChevron && (
-          <Icon name="chevron-right" size="small" color="gray" />
+          <Icon name={iconLibrary.chevronRight} size="small" color="gray" />
         )}
       </View>
     </View>

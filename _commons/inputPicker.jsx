@@ -1,16 +1,16 @@
 import React from "react";
-import { StyleSheet, Text, TextInput, View } from "react-native";
-import { palette } from "../styles";
+import { StyleSheet, Text, View } from "react-native";
+import { palette, iconLibrary } from "../styles";
 import Icon from "./icon";
 
-const InputPicker = ({ iconName = "apps", placeholder }) => {
+const InputPicker = ({ iconName = iconLibrary.apps, placeholder }) => {
   return (
     <View style={styles.container}>
       <Icon name={iconName} size="caption" color={"gray"} />
       <View style={styles.data}>
         <Text style={{ color: palette.gray }}>{placeholder}</Text>
       </View>
-      <Icon name="chevron-down" size="caption" color={"gray"} />
+      <Icon name={iconLibrary.chevronDown} size="caption" color={"gray"} />
     </View>
   );
 };
