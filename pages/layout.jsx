@@ -1,12 +1,20 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import { TextInput } from "react-native-gesture-handler";
 import { AccountOption, Card } from "../components";
 import { Avatar, SellerDetail, AppTextInput } from "../_commons";
 
 const LayoutPage = () => {
   return (
     <View style={styles.container}>
-      <AppTextInput />
+      <AppTextInput iconName="home" placeholder="Lets write" />
+      <Text></Text>
+      <AppTextInput iconName="mail" placeholder="Lets write" />
+      <Text></Text>
+
+      <AppTextInput placeholder="Lets write" />
+      <Text></Text>
+
       <AccountOption
         iconName="format-list-bulleted"
         label="my listings"

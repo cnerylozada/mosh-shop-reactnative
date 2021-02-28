@@ -1,5 +1,6 @@
 export const sizes = {
-  small: 24,
-  medium: 36,
   large: 48,
+  medium: 36,
+  small: 24,
+  caption: 18,
 };
