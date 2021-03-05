@@ -1,8 +1,22 @@
+import { palette } from "./palette";
+
 export const sizes = {
   large: 48,
   medium: 36,
   small: 24,
   caption: 18,
+};
+
+export const iconThemes = {
+  red: {
+    backgroundColor: palette.red,
+  },
+  yellow: {
+    backgroundColor: palette.yellow,
+  },
+  green: {
+    backgroundColor: palette.green,
+  },
 };
 
 export const iconLibrary = {
@@ -15,4 +29,15 @@ export const iconLibrary = {
   chevronDown: "chevron-down",
   chevronRight: "chevron-right",
   email: "email-outline",
+  pen: "fountain-pen",
+  camera: "camera",
+  car: "car",
+  floorLamp: "floor-lamp",
+  heel: "shoe-heel",
+  ball: "basketball",
+  book: "book-open-variant",
+  headphones: "headphones",
+  other: "application",
+  game: "gamepad",
+  lock: "lock",
 };

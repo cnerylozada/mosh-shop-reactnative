@@ -1,13 +1,22 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { AccountOption, Card } from "../components";
-import { Avatar, SellerDetail, AppTextInput, InputPicker } from "../_commons";
+import {
+  Avatar,
+  SellerDetail,
+  AppTextInput,
+  InputPicker,
+  Icon,
+} from "../_commons";
 import { iconLibrary } from "../styles";
 
 const LayoutPage = () => {
   const [value, setValue] = useState("xxx");
   return (
     <View style={styles.container}>
+      <View>
+        <Icon name="lock" size="small" circled theme="green" />
+      </View>
       <InputPicker placeholder="Category" />
 
       <Text>{value}</Text>
@@ -17,7 +26,6 @@ const LayoutPage = () => {
         value={value}
         onSetValue={setValue}
       />
-      <Text></Text>
       <AppTextInput placeholder="Lets write" />
       <Text></Text>
 
