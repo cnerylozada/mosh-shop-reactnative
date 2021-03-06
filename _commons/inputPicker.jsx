@@ -1,17 +1,30 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { useState } from "react";
+import {
+  Modal,
+  StyleSheet,
+  Text,
+  TouchableWithoutFeedback,
+  View,
+} from "react-native";
 import { palette, iconLibrary } from "../styles";
+import ModalCategories from "./modalCategories";
 import Icon from "./icon";
 
 const InputPicker = ({ iconName = iconLibrary.apps, placeholder }) => {
+  const [modalVisible, setModalVisible] = useState(false);
   return (
-    <View style={styles.container}>
-      <Icon name={iconName} size="caption" color={"gray"} />
-      <View style={styles.data}>
-        <Text style={{ color: palette.gray }}>{placeholder}</Text>
-      </View>
-      <Icon name={iconLibrary.chevronDown} size="caption" color={"gray"} />
-    </View>
+    <>
+      <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
+        <View style={styles.container}>
+          <Icon name={iconName} size="caption" color={"gray"} />
+          <View style={styles.data}>
+            <Text style={{ color: palette.gray }}>{placeholder}</Text>
+          </View>
+          <Icon name={iconLibrary.chevronDown} size="caption" color={"gray"} />
+        </View>
+      </TouchableWithoutFeedback>
+      <ModalCategories isVisible={modalVisible} onVisible={setModalVisible} />
+    </>
   );
 };
 

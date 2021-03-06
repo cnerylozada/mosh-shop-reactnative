@@ -7,18 +7,6 @@ export const sizes = {
   caption: 18,
 };
 
-export const iconThemes = {
-  red: {
-    backgroundColor: palette.red,
-  },
-  yellow: {
-    backgroundColor: palette.yellow,
-  },
-  green: {
-    backgroundColor: palette.green,
-  },
-};
-
 export const iconLibrary = {
   close: "alpha-x-circle-outline",
   trash: "bucket-outline",
