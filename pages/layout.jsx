@@ -11,13 +11,16 @@ import {
 import { iconLibrary } from "../styles";
 
 const LayoutPage = () => {
-  const [value, setValue] = useState("xxx");
+  const [option, setOption] = useState();
+  const [value, setValue] = useState("my input value");
   return (
     <View style={styles.container}>
-      <View>
-        <Icon name="lock" size="small" circled theme="green" />
-      </View>
-      <InputPicker placeholder="Category" />
+      <Text>{JSON.stringify(option)}</Text>
+      <InputPicker
+        placeholder="Category"
+        option={option}
+        setOption={setOption}
+      />
 
       <Text>{value}</Text>
       <AppTextInput

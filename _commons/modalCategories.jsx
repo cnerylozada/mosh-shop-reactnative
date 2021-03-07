@@ -1,18 +1,14 @@
 import React from "react";
-import {
-  Modal,
-  StyleSheet,
-  Text,
-  TouchableHighlight,
-  TouchableOpacity,
-  TouchableWithoutFeedback,
-  View,
-} from "react-native";
+import { Modal, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { palette } from "../styles";
 import { categories } from "../utils/categoryData";
 import Icon from "./icon";
 
-const ModalCategories = ({ isVisible, onVisible }) => {
+const ModalCategories = ({ isVisible, onVisible, setOption }) => {
+  const onSelect = ({ id, name }) => {
+    onVisible(!isVisible);
+    setOption({ id, name });
+  };
   return (
     <Modal alignItems="slide" visible={isVisible} transparent={true}>
       <View style={styles.wrapper}>
@@ -22,7 +18,7 @@ const ModalCategories = ({ isVisible, onVisible }) => {
           <View style={styles.itemContainer}>
             {categories.map((_) => {
               return (
-                <TouchableOpacity key={_.id} onPress={() => onVisible(false)}>
+                <TouchableOpacity key={_.id} onPress={() => onSelect(_)}>
                   <View style={styles.category}>
                     <Icon name={_.iconName} circled theme={_.color} />
                     <Text
